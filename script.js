@@ -63,6 +63,17 @@ function setDreamBackground() {
   window.setDreamImage(newPath);
 }
 
+function toggleSound() {
+  const s = document.getElementById("sound");
+  if (s.innerText === "Turn sound on") {
+    s.innerText = "Turn sound off";
+    music.play();
+  } else {
+    s.innerText = "Turn sound on";
+    music.pause();
+  }
+}
+
 window.addEventListener("load", function(event) {
   document.querySelectorAll('input[name="hallucination"]').forEach(radio => {
     radio.addEventListener('change', () => {
@@ -81,5 +92,10 @@ window.addEventListener("load", function(event) {
     setDreamText();
     setDreamBackground();
   });
+
+  const s = document.getElementById("sound");
+  s.addEventListener("click", toggleSound, false);
+  music = new Audio('sound.mp3');
+  music.loop = true;
 });
 

@@ -188,3 +188,13 @@ canvas {
   font-size: 18px;
   opacity: 0.9;
 }
+
+#sound {
+  position: fixed;
+  top: 1.5rem;
+  z-index: 10;
+  right: 1.5rem;
+  text-decoration: underline;
+  color: white;
+  cursor: pointer;
+}
