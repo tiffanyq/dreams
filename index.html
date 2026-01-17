@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>grounded in hallucination</title>
+    <meta property="og:title" content="dreams">
+    <meta property="og:description" content="what do you believe?">
+    <meta property="og:image" content="">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    <script src="script.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div id="dream-text-container">
+        <div id="dream-stack">
+          <div id="dream-text">
+              It's 2:03pm, on the cusp of 2:04pm. You finally locate the meeting room. It's a folding table in a parking space. Everyone is already gone. Also, where is your wallet?
+            </div>
+      
+          <div id="dream-controls">
+            <div id="hallucination-control">
+              <div class="hallucination-title">Hallucination</div>
+      
+              <div class="hallucination-scale-wrapper">
+                <span class="hallucination-label left">
+                    <span class="material-symbols-outlined">warning</span>
+                  None
+                </span>
+      
+                <div class="hallucination-scale" role="radiogroup" aria-label="Hallucination">
+                  <label><input type="radio" name="hallucination" value="1"><span></span></label>
+                  <label><input type="radio" name="hallucination" value="2"><span></span></label>
+                  <label><input type="radio" name="hallucination" value="3" checked><span></span></label>
+                  <label><input type="radio" name="hallucination" value="4"><span></span></label>
+                  <label><input type="radio" name="hallucination" value="5"><span></span></label>
+                </div>
+      
+                <span class="hallucination-label right"><span class="material-symbols-outlined">family_star</span>Most</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>      
+      
+      <button id="refresh-dream" aria-label="Refresh dream">
+        <span class="material-symbols-outlined">refresh</span>
+        Refresh dream
+      </button>
+      
+    <div id="footer"><a href="https://www.instagram.com/anotherbrowsertab" target="_blank">@anotherbrowsertab</a></div>
+  </body>
+</html>
