@@ -64,13 +64,25 @@ function setDreamBackground() {
 }
 
 function toggleSound() {
-  const s = document.getElementById("sound");
-  if (s.innerText === "Turn sound on") {
-    s.innerText = "Turn sound off";
+  const mb = document.getElementById("music-button");
+  const mn = mb.querySelectorAll("span")[0];
+  const label = mb.querySelectorAll("span")[1];
+  if (mn.innerText === "music_off") {
+    mn.innerText = "music_note";
+    mn.classList.add("music-on");
+    mb.ariaLabel = "Turn sound off";
+    label.classList.add("music-on");
+    label.innerText = "Turn sound off";
     music.play();
+    musicOn = true;
   } else {
-    s.innerText = "Turn sound on";
+    mn.innerText = "music_off";
+    mn.classList.remove("music-on");
+    mb.ariaLabel = "Turn sound on";
+    label.innerText = "Turn sound on";
+    label.classList.remove("music-on");
     music.pause();
+    musicOn = false;
   }
 }
 
@@ -93,8 +105,8 @@ window.addEventListener("load", function(event) {
     setDreamBackground();
   });
 
-  const s = document.getElementById("sound");
-  s.addEventListener("click", toggleSound, false);
+  const mb = document.getElementById("music-button");
+  mb.addEventListener("click", toggleSound, false);
   music = new Audio('sound.mp3');
   music.loop = true;
 });

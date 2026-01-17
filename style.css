@@ -189,12 +189,18 @@ canvas {
   opacity: 0.9;
 }
 
-#sound {
+#music-button {
+  display: flex;
+  align-items: center;
   position: fixed;
+  font-size: 14px;
   top: 1.5rem;
   z-index: 10;
   right: 1.5rem;
-  text-decoration: underline;
   color: white;
   cursor: pointer;
+}
+
+#music-button span:nth-child(2){
+  text-decoration: underline;
 }
